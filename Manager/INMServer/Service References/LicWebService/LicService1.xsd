@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8082/LicService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LicWebService" />
+  <xs:element name="LicRequestFirst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicRequestFirstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicRequestFirstResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="retMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicRequestActivation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LicWebService" minOccurs="0" name="prodInfo" nillable="true" type="q1:ProductInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicRequestActivationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicRequestActivationResult" type="xs:boolean" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LicWebService" minOccurs="0" name="actInfo" nillable="true" type="q2:ActivationInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicCheckActivationState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LicWebService" minOccurs="0" name="prodInfo" nillable="true" type="q3:ProductInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicCheckActivationStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicCheckActivationStateResult" type="xs:boolean" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LicWebService" minOccurs="0" name="actInfo" nillable="true" type="q4:ActivationInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

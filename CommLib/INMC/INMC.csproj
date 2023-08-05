@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DC81B09-3ABF-4BB3-8C08-4E8EE4432BDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INMC</RootNamespace>
+    <AssemblyName>Inmc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FORMATTER_SERIALIZE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Inmc.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>TRACE;FORMATTER_SERIALIZE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Inmc.xml</DocumentationFile>
+    <BaseAddress>4521984</BaseAddress>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Inmc.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Component\Inmc.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>4521984</BaseAddress>
+    <DocumentationFile>bin\Release\Inmc.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Component\Inmc.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FORMATTER_SERIALIZE</DefineConstants>
+    <DocumentationFile>bin\Debug\Inmc.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Component\Inmc.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\Component\</OutputPath>
+    <DefineConstants>TRACE;FORMATTER_SERIALIZE</DefineConstants>
+    <BaseAddress>4521984</BaseAddress>
+    <DocumentationFile>bin\Release\Inmc.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\Component\Inmc.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\ThreadSafeSortedList.cs" />
+    <Compile Include="Communication\InmcServices\Client\IInmcServiceClient.cs" />
+    <Compile Include="Communication\InmcServices\Client\InmcServiceClient.cs" />
+    <Compile Include="Communication\InmcServices\Client\InmcServiceClientBuilder.cs" />
+    <Compile Include="Communication\InmcServices\Communication\AutoConnectRemoteInvokeProxy.cs" />
+    <Compile Include="Communication\InmcServices\Communication\Messages\ScsRemoteException.cs" />
+    <Compile Include="Communication\InmcServices\Communication\Messages\ScsRemoteInvokeMessage.cs" />
+    <Compile Include="Communication\InmcServices\Communication\Messages\ScsRemoteInvokeReturnMessage.cs" />
+    <Compile Include="Communication\InmcServices\Communication\RemoteInvokeProxy.cs" />
+    <Compile Include="Communication\Inmc\Communication\MsgDataConverter.cs" />
+    <Compile Include="INMMessage\M0AgentInfo.cs" />
+    <Compile Include="INMMessage\M0TimeStamp.cs" />
+    <Compile Include="INMMessage\M1AppdisableSet.cs" />
+    <Compile Include="INMMessage\M1BandMon.cs" />
+    <Compile Include="INMMessage\M3FirewallSet.cs" />
+    <Compile Include="INMMessage\M6ProcAction.cs" />
+    <Compile Include="INMMessage\M8ChangeHis.cs" />
+    <Compile Include="INMMessage\M8DeviceMon.cs" />
+    <Compile Include="INMMessage\M5FileHis.cs" />
+    <Compile Include="INMMessage\M1ProhibitSet.cs" />
+    <Compile Include="INMMessage\M3PortSet.cs" />
+    <Compile Include="INMMessage\M8InstAppHis.cs" />
+    <Compile Include="INMMessage\M6ComLock.cs" />
+    <Compile Include="INMMessage\M5MailHis.cs" />
+    <Compile Include="INMMessage\MessageBase.cs" />
+    <Compile Include="INMMessage\MessageType.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messengers\RequestReplyMessenger.cs" />
+    <Compile Include="Communication\InmcServices\Service\IInmcServiceApplication.cs" />
+    <Compile Include="Communication\InmcServices\Service\IInmcServiceClient.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcService.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcServiceApplication.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcServiceAttribute.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcServiceBuilder.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcServiceClient.cs" />
+    <Compile Include="Communication\InmcServices\Service\InmcServiceClientFactory.cs" />
+    <Compile Include="Communication\InmcServices\Service\ServiceClientEventArgs.cs" />
+    <Compile Include="Communication\Inmc\Client\ClientReConnecter.cs" />
+    <Compile Include="Communication\Inmc\Client\IConnectableClient.cs" />
+    <Compile Include="Communication\Inmc\Client\IInmcClient.cs" />
+    <Compile Include="Communication\Inmc\Client\InmcClientBase.cs" />
+    <Compile Include="Communication\Inmc\Client\InmcClientFactory.cs" />
+    <Compile Include="Communication\Inmc\Client\Tcp\ScsTcpClient.cs" />
+    <Compile Include="Communication\Inmc\Client\Tcp\TcpHelper.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\CommunicationChannelBase.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\CommunicationChannelEventArgs.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\ConnectionListenerBase.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\ICommunicationChannel.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\IConnectionListener.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\Tcp\TcpCommunicationChannel.cs" />
+    <Compile Include="Communication\Inmc\Communication\Channels\Tcp\TcpConnectionListener.cs" />
+    <Compile Include="Communication\Inmc\Communication\CommunicationStateException.cs" />
+    <Compile Include="Communication\Inmc\Communication\CommunicationStates.cs" />
+    <Compile Include="Communication\Inmc\Communication\CommunicationException.cs" />
+    <Compile Include="Communication\Inmc\Communication\EndPoints\InmcEndPoint.cs" />
+    <Compile Include="Communication\Inmc\Communication\EndPoints\Tcp\InmcTcpEndPoint.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messengers\IMessenger.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\IInmcMessage.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\MessageEventArgs.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\PingMessage.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\InmcMessage.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\InmcRawDataMessage.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messages\InmcTextMessage.cs" />
+    <Compile Include="Communication\Inmc\Communication\Protocols\BinarySerialization\BinarySerializationProtocol.cs" />
+    <Compile Include="Communication\Inmc\Communication\Protocols\BinarySerialization\BinarySerializationProtocolFactory.cs" />
+    <Compile Include="Communication\Inmc\Communication\Protocols\IInmcWireProtocol.cs" />
+    <Compile Include="Communication\Inmc\Communication\Protocols\IInmcWireProtocolFactory.cs" />
+    <Compile Include="Communication\Inmc\Communication\Protocols\WireProtocolManager.cs" />
+    <Compile Include="Communication\Inmc\Communication\Messengers\SynchronizedMessenger.cs" />
+    <Compile Include="Communication\Inmc\Server\IInmcServer.cs" />
+    <Compile Include="Communication\Inmc\Server\IInmcServerClient.cs" />
+    <Compile Include="Communication\Inmc\Server\InmcServerBase.cs" />
+    <Compile Include="Communication\Inmc\Server\InmcServerClient.cs" />
+    <Compile Include="Communication\Inmc\Server\InmcServerFactory.cs" />
+    <Compile Include="Communication\Inmc\Server\InmcServerManager.cs" />
+    <Compile Include="Communication\Inmc\Server\ServerClientEventArgs.cs" />
+    <Compile Include="Communication\Inmc\Server\Tcp\InmcTcpServer.cs" />
+    <Compile Include="INMMessage\M6MsgSend.cs" />
+    <Compile Include="INMMessage\M2NetAllowSet.cs" />
+    <Compile Include="INMMessage\M2NetAppMon.cs" />
+    <Compile Include="INMMessage\M3PortMon.cs" />
+    <Compile Include="INMMessage\M5PrintHis.cs" />
+    <Compile Include="INMMessage\M8ProcMon.cs" />
+    <Compile Include="INMMessage\M6RdpMon.cs" />
+    <Compile Include="INMMessage\M4RealAppMon.cs" />
+    <Compile Include="INMMessage\M6ProcMon.cs" />
+    <Compile Include="INMMessage\M4RealScreenMon.cs" />
+    <Compile Include="INMMessage\M6UserSet.cs" />
+    <Compile Include="INMMessage\M7NetAppHis.cs" />
+    <Compile Include="INMMessage\M7WebHis.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\SequentialItemProcessor.cs" />
+    <Compile Include="Threading\Timer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\ChannelsDiagram.cd" />
+    <None Include="Diagrams\ConnListenerDiagram.cd" />
+    <None Include="Diagrams\EndPointsDiagram.cd" />
+    <None Include="Diagrams\MessageObjectsDiagram.cd" />
+    <None Include="Diagrams\RequestReplyMessengerDiagram.cd" />
+    <None Include="Diagrams\RmiMessagesDiagram.cd" />
+    <None Include="Diagrams\InmcClientDiagram.cd" />
+    <None Include="Diagrams\InmcServerClientDiagram.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagrams\InmcServerDiagram.cd" />
+    <None Include="Diagrams\InmcServiceClientDiagram.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagrams\InmcServiceDiagram.cd" />
+    <None Include="Diagrams\ServiceSideClientDiagram.cd" />
+    <None Include="Diagrams\WireProtocolsDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A7996C5-87AB-495A-83D8-2EF3ED5DC522}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INMServer</RootNamespace>
+    <AssemblyName>IMSMan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icoMain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\Bin\INMServer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\Bin\INMServer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\Bin\INMServer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\Bin\INMServer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20113.21313, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20113.19499, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Gauge.4, Version=4.0.20113.67, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20113.61237, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="EAGetMail40, Version=3.1.0.6, Culture=neutral, PublicKeyToken=e10a0812eb29cf94, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Component\EAGetMail40.dll</HintPath>
+    </Reference>
+    <Reference Include="Inmc, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Component\Inmc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Component\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ctrl1NicMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl1NicMon.Designer.cs">
+      <DependentUpon>Ctrl1NicMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessage.designer.cs">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerBack.cs" />
+    <Compile Include="ComMisc.cs" />
+    <Compile Include="Ctrl9Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl9Settings.Designer.cs">
+      <DependentUpon>Ctrl9Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl2NetSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl2NetSet.Designer.cs">
+      <DependentUpon>Ctrl2NetSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl2NetAppMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl2NetAppMon.Designer.cs">
+      <DependentUpon>Ctrl2NetAppMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl3PortSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl3PortSet.Designer.cs">
+      <DependentUpon>Ctrl3PortSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl3PortMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl3PortMon.Designer.cs">
+      <DependentUpon>Ctrl3PortMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl1ProhibitSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl1ProhibitSet.Designer.cs">
+      <DependentUpon>Ctrl1ProhibitSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl4RealAppMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl4RealAppMon.Designer.cs">
+      <DependentUpon>Ctrl4RealAppMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl4RealScreenMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl4RealScreenMon.Designer.cs">
+      <DependentUpon>Ctrl4RealScreenMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl5FileHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl5FileHis.Designer.cs">
+      <DependentUpon>Ctrl5FileHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl5MailHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl5MailHis.Designer.cs">
+      <DependentUpon>Ctrl5MailHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl5PrintHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl5PrintHis.Designer.cs">
+      <DependentUpon>Ctrl5PrintHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl6ComLock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl6ComLock.Designer.cs">
+      <DependentUpon>Ctrl6ComLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl6MsgSend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl6MsgSend.Designer.cs">
+      <DependentUpon>Ctrl6MsgSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl6ProcSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl6ProcSet.Designer.cs">
+      <DependentUpon>Ctrl6ProcSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl6RemoteSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl6RemoteSet.Designer.cs">
+      <DependentUpon>Ctrl6RemoteSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl6UserSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl6UserSet.Designer.cs">
+      <DependentUpon>Ctrl6UserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl7NetAppHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl7NetAppHis.Designer.cs">
+      <DependentUpon>Ctrl7NetAppHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl7WebHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl7WebHis.Designer.cs">
+      <DependentUpon>Ctrl7WebHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl8ChangeHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl8ChangeHis.Designer.cs">
+      <DependentUpon>Ctrl8ChangeHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl8InstAppHis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl8InstAppHis.Designer.cs">
+      <DependentUpon>Ctrl8InstAppHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl8DeviceMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl8DeviceMon.Designer.cs">
+      <DependentUpon>Ctrl8DeviceMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl8ProcMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrl8ProcMon.Designer.cs">
+      <DependentUpon>Ctrl8ProcMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlStatusProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogon.designer.cs">
+      <DependentUpon>FrmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMain.cs" />
+    <Compile Include="InmsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InmsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="INMSMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LicWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ctrl1NicMon.resx">
+      <DependentUpon>Ctrl1NicMon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl9Settings.resx">
+      <DependentUpon>Ctrl9Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl1ProhibitSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl1ProhibitSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl2NetAppMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl2NetAppMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl2NetSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl2NetSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl3PortMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl3PortMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl3PortSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl3PortSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl4RealAppMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl4RealAppMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl4RealScreenMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl4RealScreenMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl5FileHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl5FileHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl5MailHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl5MailHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl5PrintHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl5PrintHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl6ComLock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl6ComLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl6MsgSend.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl6MsgSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl6ProcSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl6ProcSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl6RemoteSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl6RemoteSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl6UserSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl6UserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl7NetAppHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl7NetAppHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl7WebHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl7WebHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl8ChangeHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl8ChangeHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl8DeviceMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl8DeviceMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl8InstAppHis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl8InstAppHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctrl8ProcMon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctrl8ProcMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogon.resx">
+      <DependentUpon>FrmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessage.resx">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InmsDataSet.xsc">
+      <DependentUpon>InmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InmsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InmsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InmsDataSet.xss">
+      <DependentUpon>InmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\LicWebService\INMServer.LicWebService.ActivationInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LicWebService\LicService.wsdl" />
+    <None Include="Service References\LicWebService\LicService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicWebService\LicService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicWebService\LicService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icoMain.ico" />
+    <None Include="Resources\icoUserDisable.ico" />
+    <None Include="Service References\LicWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LicWebService\configuration.svcinfo" />
+    <None Include="Service References\LicWebService\configuration91.svcinfo" />
+    <None Include="Resources\bkLicense.jpg" />
+    <None Include="Resources\bkMessage.jpg" />
+    <None Include="Resources\bkAbout.jpg" />
+    <None Include="Resources\icoUsers.ico" />
+    <None Include="Resources\icoUser.ico" />
+    <None Include="Resources\icoDevice.ico" />
+    <None Include="Resources\icoCom.ico" />
+    <None Include="Resources\bkLogon.jpg" />
+    <None Include="Resources\btnLoginUp.png" />
+    <None Include="Resources\btnLoginOver.png" />
+    <None Include="Resources\btnLoginDown.png" />
+    <None Include="Resources\btnCancelUp.png" />
+    <None Include="Resources\btnCancelOver.png" />
+    <None Include="Resources\btnCancelDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LicWebService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
