@@ -1,45 +1,283 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# DMY Member Monitor Application
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+A comprehensive Windows-based member monitoring and management system designed for enterprise environments. This application provides real-time monitoring, remote control, and administrative capabilities for managed client systems.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Table of Contents
+
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Components](#components)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Building](#building)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Communication Protocol](#communication-protocol)
+- [License](#license)
+
+## Overview
+
+The DMY Member Monitor Application is a client-server monitoring solution that enables administrators to monitor and manage multiple Windows workstations from a central server. The client agent runs on monitored machines and collects various data points including process information, network activity, file operations, and more.
+
+## Architecture
+
+The system follows a three-tier architecture:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      Server Layer                           │
+│  (INMServer - Management Console)                           │
+│  (INMService - Background Service)                          │
+│  (DBManager - Database Management)                          │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                    TCP/IP Communication
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│                   Communication Library                     │
+│  (INMC - Custom TCP Messaging Framework)                    │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│                    Client Layer                             │
+│  (INMAgent - Monitoring Agent)                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Components
+
+### Agent (Client-Side)
+
+| Component | Description |
+|-----------|-------------|
+| **INMAgent** | Main client application with UI and monitoring logic |
+| **AgentEngine** | Core engine for tracking and monitoring |
+| **AgentService** | Windows service implementation |
+| **AgentSetup** | Installation package |
+| **AgentWebInet** | Web integration component |
+
+### Server (Management)
+
+| Component | Description |
+|-----------|-------------|
+| **INMServer** | Main server management console (Windows Forms) |
+| **INMService** | Background service for server operations |
+| **DBManager** | Database backup and restore management |
+
+### Communication Library (CommLib/INMC)
+
+Custom TCP-based communication framework providing:
+
+- **Client/Server** - Connection-oriented messaging
+- **Protocols** - Binary serialization for data exchange
+- **Messengers** - Request/Reply and Synchronized messaging
+- **Services** - Remote method invocation support
+
+## Features
+
+### Monitoring Capabilities
+
+- **Process Monitoring** - Track running applications and processes
+- **Network Monitoring** - Monitor network connections and bandwidth
+- **URL/Website History** - Record browsing activity
+- **File Operations** - Track file create/modify/delete operations
+- **Print History** - Monitor printing activities
+- **Device Changes** - Detect hardware changes
+- **Application Usage** - Track application usage patterns
+- **Screen Capture** - Real-time screenshots
+- **Installation Tracking** - Monitor software installations
+
+### Administrative Controls
+
+- **Remote Lock** - Lock mouse and keyboard
+- **Shutdown/Reboot** - Remote system shutdown or restart
+- **Message Send** - Send messages to clients
+- **User Management** - Create/modify/delete users
+- **Application Blocking** - Prohibit specific applications
+- **Network Filtering** - Allow/block network access
+- **Port Management** - Firewall port rules
+- **Bandwidth Control** - Set bandwidth limits
+
+### Database
+
+- **SQLite** - Local data storage (both 32-bit and 64-bit)
+- **MySQL** - Centralized database support
+
+## Technology Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Language** | C# (.NET Framework) |
+| **UI** | Windows Forms |
+| **Communication** | TCP/IP (Custom INMC Protocol) |
+| **Database** | SQLite, MySQL |
+| **Build System** | MSBuild / Visual Studio |
+| **Target OS** | Windows XP/Vista/7+ |
+
+## Project Structure
+
+```
+dmy-member-monitor-app/
+├── Agent/                      # Client-side monitoring agent
+│   ├── INMAgent/              # Main agent application
+│   ├── AgentEngine/           # Core tracking engine
+│   │   ├── COMMON/           # Common utilities
+│   │   ├── GDI/              # Graphics utilities
+│   │   ├── HOOK/             # Keyboard/Mouse hooks
+│   │   ├── TRACK/            # Tracking modules
+│   │   │   └── DismountUSB/  # USB device management
+│   │   └── URL/               # URL history
+│   ├── AgentService/          # Windows service
+│   ├── AgentSetup/           # Installer
+│   ├── AgentWebInet/         # Web integration
+│   └── INMC/                 # Communication library
+│
+├── Manager/                    # Server-side components
+│   ├── INMServer/            # Main server console
+│   ├── INMService/           # Background service
+│   └── DBManager/            # Database management
+│
+├── Component/                 # Third-party components
+│   ├── SQLite32/             # 32-bit SQLite
+│   └── SQLite64/             # 64-bit SQLite
+│
+├── Database/                  # Database scripts
+│   └── inms2db_essential.sql
+│
+└── README.md
+```
+
+## Building
+
+### Prerequisites
+
+- Visual Studio 2010 or later
+- .NET Framework 3.5 or higher
+- Windows SDK (for Windows Forms)
+
+### Build Instructions
+
+1. Open the solution file:
+   - `INMAgent1.20(vs2010).sln` for Agent
+   - `INManager1.20(vs2010).sln` for Manager
+
+2. Select the appropriate build configuration:
+   - **Debug** - Development build
+   - **Release** - Production build
+
+3. Build using MSBuild:
+   ```bash
+   msbuild INMAgent.sln /p:Configuration=Release
+   ```
+
+4. Or open in Visual Studio:
+   ```bash
+   start INMAgent1.20(vs2010).sln
+   ```
+
+### Build Outputs
+
+- **Agent**: `INMAgent/bin/Release/INMAgent.exe`
+- **Server**: `INMServer/bin/Release/INMServer.exe`
+- **Service**: `INMService/bin/Release/INMService.exe`
+
+## Installation
+
+### Server Installation
+
+1. Run `INMServer.exe` on the management server
+2. Configure database connection settings
+3. Set up administrator accounts
+4. Configure network ports (default: 10180-10182)
+
+### Client Installation
+
+1. Run `AgentSetup.exe` on target machines
+2. Configure server address via registry or setup wizard
+3. The agent will start automatically on system boot
+
+### Registry Configuration
+
+The agent reads server configuration from:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\HanaYonghe Inc\IMS Agent
+```
+
+- `ManAddress` - Server IP address (default: 192.168.3.168)
+
+## Configuration
+
+### Server Ports
+
+| Port | Purpose |
+|------|---------|
+| 10180 | Main communication |
+| 10181 | Background communication |
+| 10182 | Initialization |
+
+### Timer Intervals
+
+Default polling intervals (in seconds):
+- Process check: 2.3s
+- State update: 1s
+- History: 1s
+- Screen capture: 500ms
+- Web URL history: 80s
+- Network app history: 100s
+
+## Communication Protocol
+
+### Message Types
+
+The system uses custom message types (MSG0-MSG8) for different operations:
+
+- **MSG0**: Agent information
+- **MSG1**: Prohibit settings / App disable
+- **MSG2**: Network settings / App monitoring
+- **MSG3**: Firewall / Port settings
+- **MSG4**: Real-time app/screen monitoring
+- **MSG5**: File/Print/Mail history
+- **MSG6**: Control (lock/shutdown/users)
+- **MSG7**: Web/Network history
+- **MSG8**: Device/Process changes
+
+### Data Serialization
+
+- Uses .NET BinaryFormatter for message serialization
+- Messages sent via TCP/IP using custom INMC protocol
+- Both raw data and text message formats supported
+
+## Database Schema
+
+The essential database schema is stored in `inms2db_essential.sql`. Key tables include:
+
+- Agent information
+- Process history
+- Network connections
+- File operations
+- Print logs
+- Device changes
+- User activities
+
+## Error Handling
+
+- Errors logged to `CustsErr.log` in application directory
+- Uses Windows Event Log for critical errors
+- Network disconnection auto-reconnect (6-second interval)
+
+## Version Information
+
+- **Version**: 1.20
+- **Visual Studio**: 2010
+- **Target Framework**: .NET
+
+## License
+
+This software is proprietary and may only be used with proper licensing. Contact the vendor for license information.
 
 ---
 
-## Edit a file
+For technical support and documentation, please refer to the vendor documentation or contact your system administrator.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
